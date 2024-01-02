@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+
+<div class="card text-center">
+  <div class="card-header">
+    Привет!
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Уважаемый {{ user.username}}</h5>
+    <p class="card-text">Нажми на кнопку ниже</p>
+    <a href="{% url 'recipes-home' %}" class="btn btn-primary">Посмотреть рецепты</a>
+  </div>
+  <div class="card-footer text-muted">
+    Проект “Сайт рецептов” на Django
+  </div>
+</div>
+
+{% endblock content %}
